@@ -1,0 +1,20 @@
+manifestVersion: 1
+
+name: "@sntxrr/pihole-denylist"
+version: "2026.09.27.1"
+description: "Declare a Pi-hole v6 exact-deny list in swamp and converge an appliance to it: plan by default, apply on request, prune only when asked"
+repository: "https://github.com/sntxrr/swamp-pihole-denylist"
+
+models:
+  - pihole_denylist.ts
+
+additionalFiles:
+  - README.md
+  - LICENSE.md
+
+labels:
+  - dns
+  - pihole
+  - networking
+  - blocklist
+  - homelab
