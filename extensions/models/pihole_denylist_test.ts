@@ -9,7 +9,7 @@ import {
 import {
   createModelTestContext,
   withMockedFetch,
-} from "jsr:@swamp-club/swamp-testing";
+} from "jsr:@swamp-club/swamp-testing@0.20260928.39";
 import { model } from "./pihole_denylist.ts";
 import {
   baseUrl,
@@ -284,7 +284,7 @@ Deno.test("per-domain add errors are recorded and fail the method", async () => 
         },
       }, { status: 201 });
     }
-    return fake.handler(req);
+    return await fake.handler(req);
   };
   const { context, getWrittenResources } = convergeContext();
   await withMockedFetch(failing, async () => {
